@@ -570,7 +570,7 @@ $ curl -X GET http://localhost:4000/
 $ curl -X POST http://localhost:4000/posting \
   -H "Content-Type: application/json" \
   -d '{
-    "message": "Check out our latest business platform and grow your online visibility. https://example.com"
+    "message": "Check out our latest business platform and grow your online visibility. https://aquawasouk.com"
   }'
 
 HTTP/1.1 200 OK
@@ -618,7 +618,7 @@ Content-Type: application/json
     {
       "platform": "Bluesky",
       "status": "success",
-      "posted_url": "https://bsky.app/profile/demo.bsky.social/post/3lac78xyz12",
+      "posted_url": "https://bsky.app/profile/youssefbellagha.bsky.social/post/3n2g6p6kmcm2p",
       "public_access": true,
       "date": "2026-11-16",
       "time": "09:15:59",
@@ -697,6 +697,7 @@ Content-Type: application/json
 #### 4. Input Validation Error Logs (`422 Unprocessable Entity`)
 
 - **Missing CTA Link**:
+
 ```bash
 $ curl -X POST http://localhost:4000/posting \
   -H "Content-Type: application/json" \
@@ -717,6 +718,7 @@ HTTP/1.1 422 Unprocessable Entity
 ```
 
 - **Multiple CTA Links**:
+
 ```bash
 $ curl -X POST http://localhost:4000/posting \
   -H "Content-Type: application/json" \
@@ -737,6 +739,7 @@ HTTP/1.1 422 Unprocessable Entity
 ```
 
 - **Message Exceeding 200 Characters**:
+
 ```bash
 $ curl -X POST http://localhost:4000/posting \
   -H "Content-Type: application/json" \
@@ -757,6 +760,7 @@ HTTP/1.1 422 Unprocessable Entity
 ```
 
 - **Invalid Protocol / URL Syntax**:
+
 ```bash
 $ curl -X POST http://localhost:4000/posting \
   -H "Content-Type: application/json" \
@@ -777,6 +781,7 @@ HTTP/1.1 422 Unprocessable Entity
 ```
 
 - **Rejected Platform Injection (Platform Selection Handled Internally)**:
+
 ```bash
 $ curl -X POST http://localhost:4000/posting \
   -H "Content-Type: application/json" \
