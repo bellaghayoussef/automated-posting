@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" width="1000" height="680">
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .header-bg { fill: #1e293b; }
+      .card-bg { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1; rx: 8px; }
+      .ep-header { fill: #e8f5e9; stroke: #49cc90; stroke-width: 1.5; rx: 4px; }
+      .method-tag { fill: #49cc90; rx: 4px; }
+      .btn { fill: #3b82f6; rx: 4px; }
+      .code-bg { fill: #0f172a; rx: 6px; }
+      .text-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; fill: #ffffff; font-size: 20px; }
+      .text-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 13px; fill: #94a3b8; }
+      .text-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 14px; fill: #334155; }
+      .text-method { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 14px; fill: #ffffff; }
+      .text-path { font-family: "Courier New", Courier, monospace; font-weight: 700; font-size: 16px; fill: #0f172a; }
+      .text-code { font-family: "Courier New", Courier, monospace; font-size: 12.5px; fill: #38bdf8; }
+      .text-btn { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 12px; fill: #ffffff; }
+    </style>
+  </defs>
+
+  <!-- Browser Frame -->
+  <rect class="bg" width="1000" height="680" rx="10"/>
+  <rect class="header-bg" width="1000" height="50" rx="10"/>
+  <rect class="header-bg" y="40" width="1000" height="10"/>
+  
+  <!-- Window Controls -->
+  <circle cx="25" cy="25" r="6" fill="#ef4444"/>
+  <circle cx="45" cy="25" r="6" fill="#f59e0b"/>
+  <circle cx="65" cy="25" r="6" fill="#10b981"/>
+  
+  <!-- Browser URL Bar -->
+  <rect x="180" y="12" width="640" height="26" rx="5" fill="#334155"/>
+  <text x="360" y="29" font-family="sans-serif" font-size="12" fill="#cbd5e1">http://localhost:4000/docs</text>
+
+  <!-- Header Info -->
+  <text x="50" y="90" class="text-body" font-size="28" font-weight="700" fill="#0f172a">Automated Multi-Platform Posting System</text>
+  <rect x="520" y="73" width="55" height="22" rx="11" fill="#0284c7"/>
+  <text x="531" y="88" font-family="sans-serif" font-size="11" font-weight="700" fill="#ffffff">v1.0.0</text>
+  <rect x="585" y="73" width="85" height="22" rx="11" fill="#64748b"/>
+  <text x="595" y="88" font-family="sans-serif" font-size="11" font-weight="700" fill="#ffffff">OAS 3.1.0</text>
+  <text x="50" y="118" class="text-body" font-size="14" fill="#64748b">Concurrent REST API for broadcasting short messages to Telegram, Discord, Slack, Mastodon, and Bluesky.</text>
+
+  <!-- Posting Tag Section -->
+  <text x="50" y="160" font-family="sans-serif" font-size="18" font-weight="700" fill="#1e293b">Posting</text>
+  <text x="120" y="160" font-family="sans-serif" font-size="14" fill="#64748b">Multi-platform dispatch endpoints</text>
+
+  <!-- Expanded Endpoint Box -->
+  <rect x="50" y="175" width="900" height="470" rx="6" fill="#ffffff" stroke="#49cc90" stroke-width="2"/>
+  
+  <!-- Endpoint Bar -->
+  <rect x="50" y="175" width="900" height="42" rx="4" fill="#e8f5e9"/>
+  <rect x="62" y="182" width="65" height="28" rx="4" class="method-tag"/>
+  <text x="76" y="201" class="text-method">POST</text>
+  <text x="140" y="202" class="text-path">/posting</text>
+  <text x="240" y="201" class="text-body" font-size="13" fill="#334155">Publish short message across multi-platform integrations</text>
+
+  <!-- Request Body Details -->
+  <text x="70" y="245" font-family="sans-serif" font-size="14" font-weight="700" fill="#1e293b">Parameters</text>
+  <text x="70" y="270" font-family="sans-serif" font-size="13" font-weight="600" fill="#475569">Request body <tspan fill="#ef4444">* required</tspan></text>
+  <text x="70" y="290" font-family="sans-serif" font-size="12" fill="#64748b">application/json</text>
+
+  <!-- Request Schema Payload Box -->
+  <rect x="70" y="300" width="860" height="70" rx="4" class="code-bg"/>
+  <text x="85" y="325" class="text-code">{</text>
+  <text x="105" y="343" class="text-code"><tspan fill="#e2e8f0">"message"</tspan>: <tspan fill="#a7f3d0">"Check out our latest business platform and grow your online visibility. https://example.com"</tspan></text>
+  <text x="85" y="360" class="text-code">}</text>
+
+  <!-- Responses Section -->
+  <text x="70" y="400" font-family="sans-serif" font-size="14" font-weight="700" fill="#1e293b">Responses</text>
+  
+  <rect x="70" y="415" width="860" height="210" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Response 200 Row -->
+  <text x="90" y="440" font-family="sans-serif" font-size="14" font-weight="700" fill="#10b981">200</text>
+  <text x="135" y="440" font-family="sans-serif" font-size="13" fill="#334155">Successful Response (PostingResponse)</text>
+
+  <!-- Response Code Preview -->
+  <rect x="90" y="455" width="820" height="155" rx="4" class="code-bg"/>
+  <text x="105" y="475" class="text-code">{</text>
+  <text x="125" y="493" class="text-code"><tspan fill="#e2e8f0">"success"</tspan>: <tspan fill="#fbbf24">true</tspan>,</text>
+  <text x="125" y="511" class="text-code"><tspan fill="#e2e8f0">"results"</tspan>: [</text>
+  <text x="145" y="529" class="text-code">{ <tspan fill="#e2e8f0">"platform"</tspan>: <tspan fill="#a7f3d0">"Telegram"</tspan>, <tspan fill="#e2e8f0">"status"</tspan>: <tspan fill="#a7f3d0">"success"</tspan>, <tspan fill="#e2e8f0">"posted_url"</tspan>: <tspan fill="#a7f3d0">"https://t.me/channel/123"</tspan>, <tspan fill="#e2e8f0">"public_access"</tspan>: <tspan fill="#fbbf24">true</tspan> },</text>
+  <text x="145" y="547" class="text-code">{ <tspan fill="#e2e8f0">"platform"</tspan>: <tspan fill="#a7f3d0">"Discord"</tspan>, <tspan fill="#e2e8f0">"status"</tspan>: <tspan fill="#a7f3d0">"success"</tspan>, <tspan fill="#e2e8f0">"posted_url"</tspan>: <tspan fill="#a7f3d0">"https://discord.com/channels/..."</tspan>, <tspan fill="#e2e8f0">"public_access"</tspan>: <tspan fill="#f87171">false</tspan> },</text>
+  <text x="145" y="565" class="text-code"><tspan fill="#94a3b8">/* Slack, Mastodon, Bluesky ... */</tspan></text>
+  <text x="125" y="583" class="text-code">]</text>
+  <text x="105" y="601" class="text-code">}</text>
+</svg>

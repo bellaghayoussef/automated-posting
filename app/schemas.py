@@ -122,3 +122,4 @@ class PostingResponse(BaseModel):
     """
     success: bool = Field(..., description="Overall operation status (true if at least one platform succeeded)")
     results: List[PlatformResult] = Field(..., description="Individual platform posting outcomes")
+

@@ -89,9 +89,10 @@ class BasePlatform(ABC):
         If any exception occurs, it will be safely caught and mapped to a failed PlatformResult
         without breaking execution of other platforms.
         """
+        if settings.MOCK_MODE:
+            return self.simulate_mock_publish(message, cta_url)
+
         if not self.is_configured():
-            if settings.MOCK_MODE:
-                return self.simulate_mock_publish(message, cta_url)
             return self.create_failure_result(
                 f"Authentication failed: Missing credentials for {self.name}"
             )
@@ -115,3 +116,4 @@ class BasePlatform(ABC):
             return self.create_failure_result(
                 f"Unexpected error: {str(e)}"
             )
+

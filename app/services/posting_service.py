@@ -68,3 +68,4 @@ class PostingService:
 
 
 posting_service = PostingService()
+

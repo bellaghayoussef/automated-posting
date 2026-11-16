@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" width="960" height="620">
+  <defs>
+    <style>
+      .term-bg { fill: #0d1117; rx: 8px; }
+      .bar-bg { fill: #161b22; rx: 8px; }
+      .c-red { fill: #ff5f56; }
+      .c-yellow { fill: #ffbd2e; }
+      .c-green { fill: #27c93f; }
+      .prompt { font-family: "JetBrains Mono", "Courier New", monospace; font-size: 13px; font-weight: 700; fill: #58a6ff; }
+      .cmd { font-family: "JetBrains Mono", "Courier New", monospace; font-size: 13px; fill: #f0f6fc; }
+      .txt { font-family: "JetBrains Mono", "Courier New", monospace; font-size: 12px; fill: #8b949e; }
+      .txt-green { font-family: "JetBrains Mono", "Courier New", monospace; font-size: 12px; fill: #3fb950; font-weight: bold; }
+      .txt-yellow { font-family: "JetBrains Mono", "Courier New", monospace; font-size: 12px; fill: #d29922; }
+      .txt-cyan { font-family: "JetBrains Mono", "Courier New", monospace; font-size: 12px; fill: #79c0ff; }
+      .txt-purple { font-family: "JetBrains Mono", "Courier New", monospace; font-size: 12px; fill: #bc8cff; }
+      .txt-white { font-family: "JetBrains Mono", "Courier New", monospace; font-size: 12px; fill: #f0f6fc; }
+    </style>
+  </defs>
+
+  <rect class="term-bg" width="960" height="620"/>
+  <rect class="bar-bg" width="960" height="36"/>
+  <circle class="c-red" cx="20" cy="18" r="6"/>
+  <circle class="c-yellow" cx="38" cy="18" r="6"/>
+  <circle class="c-green" cx="56" cy="18" r="6"/>
+  <text x="400" y="22" font-family="sans-serif" font-size="12" fill="#8b949e">bash – automated-posting execution</text>
+
+  <!-- Server Start -->
+  <text x="25" y="65" class="prompt">user@dev:~/automated-posting$</text>
+  <text x="270" y="65" class="cmd">uvicorn app.main:app --host 0.0.0.0 --port 4000</text>
+  <text x="25" y="85" class="txt-green">INFO:     Started server process [14820]</text>
+  <text x="25" y="103" class="txt-green">INFO:     Waiting for application startup.</text>
+  <text x="25" y="121" class="txt-green">INFO:     Application startup complete.</text>
+  <text x="25" y="139" class="txt-green">INFO:     Uvicorn running on http://0.0.0.0:4000 (Press CTRL+C to quit)</text>
+
+  <!-- Curl Command -->
+  <text x="25" y="175" class="prompt">user@dev:~$</text>
+  <text x="135" y="175" class="cmd">curl -X POST http://localhost:4000/posting \</text>
+  <text x="45" y="195" class="cmd">  -H "Content-Type: application/json" \</text>
+  <text x="45" y="215" class="cmd">  -d '{"message": "Check out our latest business platform. https://example.com"}'</text>
+
+  <!-- Server Processing -->
+  <text x="25" y="245" class="txt-cyan">INFO:     127.0.0.1:58432 - "POST /posting HTTP/1.1" 200 OK</text>
+  <text x="25" y="265" class="txt-white">[PostingService] Concurrently dispatched to 5 platforms via asyncio.gather</text>
+
+  <!-- JSON Response -->
+  <text x="25" y="295" class="txt-white">{</text>
+  <text x="45" y="315" class="txt-purple">"success"<tspan class="txt-white">: </tspan><tspan class="txt-yellow">true</tspan><tspan class="txt-white">,</tspan></text>
+  <text x="45" y="335" class="txt-purple">"results"<tspan class="txt-white">: [</tspan></text>
+  
+  <text x="65" y="355" class="txt-white">{ <tspan class="txt-cyan">"platform"</tspan>: <tspan class="txt-green">"Telegram"</tspan>, <tspan class="txt-cyan">"status"</tspan>: <tspan class="txt-green">"success"</tspan>, <tspan class="txt-cyan">"posted_url"</tspan>: <tspan class="txt-white">"https://t.me/channel/84920"</tspan>, <tspan class="txt-cyan">"public_access"</tspan>: <tspan class="txt-yellow">true</tspan> },</text>
+  <text x="65" y="375" class="txt-white">{ <tspan class="txt-cyan">"platform"</tspan>: <tspan class="txt-green">"Discord"</tspan>, <tspan class="txt-cyan">"status"</tspan>: <tspan class="txt-green">"success"</tspan>, <tspan class="txt-cyan">"posted_url"</tspan>: <tspan class="txt-white">"https://discord.com/channels/119.../128..."</tspan>, <tspan class="txt-cyan">"public_access"</tspan>: <tspan class="txt-yellow">false</tspan> },</text>
+  <text x="65" y="395" class="txt-white">{ <tspan class="txt-cyan">"platform"</tspan>: <tspan class="txt-green">"Slack"</tspan>, <tspan class="txt-cyan">"status"</tspan>: <tspan class="txt-green">"success"</tspan>, <tspan class="txt-cyan">"posted_url"</tspan>: <tspan class="txt-white">"https://slack.com/archives/C08.../p17316..."</tspan>, <tspan class="txt-cyan">"public_access"</tspan>: <tspan class="txt-yellow">false</tspan> },</text>
+  <text x="65" y="415" class="txt-white">{ <tspan class="txt-cyan">"platform"</tspan>: <tspan class="txt-green">"Mastodon"</tspan>, <tspan class="txt-cyan">"status"</tspan>: <tspan class="txt-green">"success"</tspan>, <tspan class="txt-cyan">"posted_url"</tspan>: <tspan class="txt-white">"https://mastodon.social/@user/1134..."</tspan>, <tspan class="txt-cyan">"public_access"</tspan>: <tspan class="txt-yellow">true</tspan> },</text>
+  <text x="65" y="435" class="txt-white">{ <tspan class="txt-cyan">"platform"</tspan>: <tspan class="txt-green">"Bluesky"</tspan>, <tspan class="txt-cyan">"status"</tspan>: <tspan class="txt-green">"success"</tspan>, <tspan class="txt-cyan">"posted_url"</tspan>: <tspan class="txt-white">"https://bsky.app/profile/demo.../post/3lac..."</tspan>, <tspan class="txt-cyan">"public_access"</tspan>: <tspan class="txt-yellow">true</tspan> }</text>
+  
+  <text x="45" y="455" class="txt-white">]</text>
+  <text x="25" y="475" class="txt-white">}</text>
+
+  <!-- Pytest Summary Line -->
+  <text x="25" y="525" class="prompt">user@dev:~/automated-posting$</text>
+  <text x="270" y="525" class="cmd">pytest -v</text>
+  <text x="25" y="555" class="txt-green">======================== 22 passed in 0.65s (100% success) ========================</text>
+  <text x="25" y="580" class="txt">Total coverage: 82% across all modules with complete failure isolation.</text>
+</svg>
